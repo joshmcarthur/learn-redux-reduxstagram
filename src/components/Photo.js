@@ -1,6 +1,6 @@
 import React from "react";
 import CSSTransitionGroup from "react-addons-css-transition-group";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Photo = props => {
   const { post, i, comments } = props;

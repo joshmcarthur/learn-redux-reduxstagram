@@ -10,7 +10,7 @@ class Comments extends React.Component {
           <button
             className="remove-comment"
             onClick={() =>
-              this.props.removeComment(this.props.params.postId, i)
+              this.props.removeComment(this.props.match.params.postId, i)
             }
           >
             &times;
@@ -21,7 +21,7 @@ class Comments extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const { postId } = this.props.params;
+    const { postId } = this.props.match.params;
     const author = this.refs.author.value;
     const comment = this.refs.comment.value;
     this.props.addComment(postId, author, comment);
